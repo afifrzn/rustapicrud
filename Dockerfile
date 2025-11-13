@@ -21,6 +21,6 @@ FROM debian:buster-slim
 
 WORKDIR /usr/local/bin
 
-COPY --from=builder /app/target/release/rustapicrud .
+COPY --from=builder /app/target/release/rust-api .
 
-CMD ["./rustapicrud"]
+CMD ["./rust-api"]
