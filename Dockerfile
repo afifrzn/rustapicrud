@@ -23,4 +23,4 @@ WORKDIR /usr/local/bin
 
 COPY --from=builder /app/target/release/rustapicrud .
 
-CMD ["./rust-crud-api"]
+CMD ["./rustapicrud"]
