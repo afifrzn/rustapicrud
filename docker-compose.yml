@@ -4,27 +4,21 @@ services:
   rustapp:
     container_name: rustapp
     image: francescoxx/rustapp:1.0.0
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        DATABASE_URL: postgres://postgres:postgres@db:5432/postgres
-    ports:
-      - '8080:8080'
-    depends_on:
-      - db
+    networks:
+      - rustapicrud_default
 
   db:
     container_name: db
     image: 'postgres:12'
-    ports:
-      - '5432:5432'
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=postgres
-    volumes:
-      - pgdata:/var/lib/postgresql/data
+    networks:
+      - rustapicrud_default
 
-volumes:
-  pgdata: {}
+  reactbe:
+    container_name: reactbe
+    image: node:24-alpine
+    networks:
+      - rustapicrud_default
+
+networks:
+  rustapicrud_default:
+    external: true
