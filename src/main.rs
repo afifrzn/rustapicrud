@@ -16,6 +16,12 @@ struct User {
     password: String,
 }
 
+#[derive(Serialize, Deserialize)]
+struct Mapel {
+    id: Option<i32>,
+    mapel: String,
+}
+
 //DATABASE URL
 const DB_URL: &str = env!("DATABASE_URL");
 
