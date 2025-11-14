@@ -71,6 +71,7 @@ fn handle_client(mut stream: TcpStream) {
                 r if r.starts_with("PUT /users/") => handle_put_request(r),
                 r if r.starts_with("DELETE /users/") => handle_delete_request(r),
                 r if r.starts_with("GET /mapel/") => handle_get_request(r),
+                r if r.starts_with("POST /mapel/") => handle_get_request(r),
                 _ => (NOT_FOUND.to_string(), "404 not found".to_string()),
             };
 
@@ -80,7 +81,7 @@ fn handle_client(mut stream: TcpStream) {
     }
 }
 
-//handle post request
+//handle post user request
 fn handle_post_request(request: &str) -> (String, String) {
     match (get_user_request_body(&request), Client::connect(DB_URL, NoTls)) {
         (Ok(user), Ok(mut client)) => {
@@ -97,7 +98,24 @@ fn handle_post_request(request: &str) -> (String, String) {
     }
 }
 
-//handle get request
+//handle post user request
+fn handle_post_request(request: &str) -> (String, String) {
+    match (get_user_request_body(&request), Client::connect(DB_URL, NoTls)) {
+        (Ok(user), Ok(mut client)) => {
+            client
+                .execute(
+                    "INSERT INTO mapel (name) VALUES ($1)",
+                    &[&user.name]
+                )
+                .unwrap();
+
+            (OK_RESPONSE.to_string(), "User created".to_string())
+        }
+        _ => (INTERNAL_ERROR.to_string(), "Internal error".to_string()),
+    }
+}
+
+//handle get user request
 fn handle_get_request(request: &str) -> (String, String) {
     match (get_id(&request).parse::<i32>(), Client::connect(DB_URL, NoTls)) {
         (Ok(id), Ok(mut client)) =>
@@ -119,7 +137,27 @@ fn handle_get_request(request: &str) -> (String, String) {
     }
 }
 
-//handle get all request
+//handle get user request
+fn handle_get_request(request: &str) -> (String, String) {
+    match (get_id(&request).parse::<i32>(), Client::connect(DB_URL, NoTls)) {
+        (Ok(id), Ok(mut client)) =>
+            match client.query_one("SELECT * FROM mapel WHERE id = $1", &[&id]) {
+                Ok(row) => {
+                    let mapel = Mapel {
+                        id: row.get(0),
+                        name: row.get(1),
+                    };
+
+                    (OK_RESPONSE.to_string(), serde_json::to_string(&user).unwrap())
+                }
+                _ => (NOT_FOUND.to_string(), "Mapel not found".to_string()),
+            }
+
+        _ => (INTERNAL_ERROR.to_string(), "Internal error".to_string()),
+    }
+}
+
+//handle get all users request
 fn handle_get_all_request(_request: &str) -> (String, String) {
     match Client::connect(DB_URL, NoTls) {
         Ok(mut client) => {
@@ -140,7 +178,26 @@ fn handle_get_all_request(_request: &str) -> (String, String) {
     }
 }
 
-//handle put request
+//handle get all users request
+fn handle_get_all_request(_request: &str) -> (String, String) {
+    match Client::connect(DB_URL, NoTls) {
+        Ok(mut client) => {
+            let mut users = Vec::new();
+
+            for row in client.query("SELECT id, name FROM mapel", &[]).unwrap() {
+                users.push(User {
+                    id: row.get(0),
+                    name: row.get(1),
+                });
+            }
+
+            (OK_RESPONSE.to_string(), serde_json::to_string(&users).unwrap())
+        }
+        _ => (INTERNAL_ERROR.to_string(), "Internal error".to_string()),
+    }
+}
+
+//handle put users request
 fn handle_put_request(request: &str) -> (String, String) {
     match
         (
@@ -152,7 +209,7 @@ fn handle_put_request(request: &str) -> (String, String) {
         (Ok(id), Ok(user), Ok(mut client)) => {
             client
                 .execute(
-                    "UPDATE users SET name = $1, email = $2, password = $3 WHERE id = $4",
+                    "UPDATE mapel SET name = $1, email = $2, password = $3 WHERE id = $4",
                     &[&user.name, &user.email, &user.password, &id]
                 )
                 .unwrap();
@@ -163,7 +220,30 @@ fn handle_put_request(request: &str) -> (String, String) {
     }
 }
 
-//handle delete request
+//handle put mapel request
+fn handle_put_request(request: &str) -> (String, String) {
+    match
+        (
+            get_id(&request).parse::<i32>(),
+            get_user_request_body(&request),
+            Client::connect(DB_URL, NoTls),
+        )
+    {
+        (Ok(id), Ok(user), Ok(mut client)) => {
+            client
+                .execute(
+                    "UPDATE users SET name = $1 WHERE id = $2",
+                    &[&user.name, &id]
+                )
+                .unwrap();
+
+            (OK_RESPONSE.to_string(), "User updated".to_string())
+        }
+        _ => (INTERNAL_ERROR.to_string(), "Internal error".to_string()),
+    }
+}
+
+//handle delete users request
 fn handle_delete_request(request: &str) -> (String, String) {
     match (get_id(&request).parse::<i32>(), Client::connect(DB_URL, NoTls)) {
         (Ok(id), Ok(mut client)) => {
@@ -175,6 +255,23 @@ fn handle_delete_request(request: &str) -> (String, String) {
             }
 
             (OK_RESPONSE.to_string(), "User deleted".to_string())
+        }
+        _ => (INTERNAL_ERROR.to_string(), "Internal error".to_string()),
+    }
+}
+
+//handle delete mapel request
+fn handle_delete_request(request: &str) -> (String, String) {
+    match (get_id(&request).parse::<i32>(), Client::connect(DB_URL, NoTls)) {
+        (Ok(id), Ok(mut client)) => {
+            let rows_affected = client.execute("DELETE FROM mapel WHERE id = $1", &[&id]).unwrap();
+
+            //if rows affected is 0, user not found
+            if rows_affected == 0 {
+                return (NOT_FOUND.to_string(), "mapel not found".to_string());
+            }
+
+            (OK_RESPONSE.to_string(), "mapel deleted".to_string())
         }
         _ => (INTERNAL_ERROR.to_string(), "Internal error".to_string()),
     }
@@ -196,6 +293,19 @@ fn set_database() -> Result<(), PostgresError> {
     Ok(())
 }
 
+fn set_database() -> Result<(), PostgresError> {
+    let mut client = Client::connect(DB_URL, NoTls)?;
+    client.batch_execute(
+        "
+        CREATE TABLE IF NOT EXISTS mapel (
+            id SERIAL PRIMARY KEY,
+            mapel VARCHAR NOT NULL
+        )
+    "
+    )?;
+    Ok(())
+}
+
 //Get id from request URL
 fn get_id(request: &str) -> &str {
     request.split("/").nth(2).unwrap_or_default().split_whitespace().next().unwrap_or_default()
@@ -203,5 +313,10 @@ fn get_id(request: &str) -> &str {
 
 //deserialize user from request body without id
 fn get_user_request_body(request: &str) -> Result<User, serde_json::Error> {
+    serde_json::from_str(request.split("\r\n\r\n").last().unwrap_or_default())
+}
+
+//deserialize get from request body without id
+fn get_mapel_request_body(request: &str) -> Result<User, serde_json::Error> {
     serde_json::from_str(request.split("\r\n\r\n").last().unwrap_or_default())
 }
