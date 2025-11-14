@@ -1,16 +1,6 @@
-version: '3.9'
+version: "3.9"
 
 services:
-  rustapp:
-    container_name: rustapp
-    image: francescoxx/rustapp:1.0.0
-    depends_on:
-      - db
-    environment:
-      DATABASE_URL: postgres://postgres:postgres123@db:5432/rustapp
-    networks:
-      - rustapicrud_default
-
   db:
     image: postgres:12
     container_name: db
@@ -26,15 +16,20 @@ services:
     networks:
       - rustapicrud_default
 
+  rustapp:
+    container_name: rustapp
+    image: francescoxx/rustapp:1.0.0
+    restart: always
+    environment:
+      DATABASE_URL: postgres://postgres:postgres123@db:5432/rustapp
+    depends_on:
+      - db
+    networks:
+      - rustapicrud_default
+
   reactbe:
     container_name: reactbe
     image: node:24-alpine
-    working_dir: /app
-    volumes:
-      - ./reactbe:/app
-    command: ["npm", "start"]
-    ports:
-      - "5173:5173"
     networks:
       - rustapicrud_default
 
