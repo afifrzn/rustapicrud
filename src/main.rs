@@ -13,6 +13,7 @@ struct User {
     id: Option<i32>,
     name: String,
     email: String,
+    password: String,
 }
 
 //DATABASE URL
@@ -77,8 +78,8 @@ fn handle_post_request(request: &str) -> (String, String) {
         (Ok(user), Ok(mut client)) => {
             client
                 .execute(
-                    "INSERT INTO users (name, email) VALUES ($1, $2)",
-                    &[&user.name, &user.email]
+                    "INSERT INTO users (name, email, password) VALUES ($1, $2, $3)",
+                    &[&user.name, &user.email, &user.password]
                 )
                 .unwrap();
 
@@ -98,6 +99,7 @@ fn handle_get_request(request: &str) -> (String, String) {
                         id: row.get(0),
                         name: row.get(1),
                         email: row.get(2),
+                        password: row.get(3),
                     };
 
                     (OK_RESPONSE.to_string(), serde_json::to_string(&user).unwrap())
@@ -115,11 +117,12 @@ fn handle_get_all_request(_request: &str) -> (String, String) {
         Ok(mut client) => {
             let mut users = Vec::new();
 
-            for row in client.query("SELECT id, name, email FROM users", &[]).unwrap() {
+            for row in client.query("SELECT id, name, email, password FROM users", &[]).unwrap() {
                 users.push(User {
                     id: row.get(0),
                     name: row.get(1),
                     email: row.get(2),
+                    password: row.get(3),
                 });
             }
 
@@ -141,8 +144,8 @@ fn handle_put_request(request: &str) -> (String, String) {
         (Ok(id), Ok(user), Ok(mut client)) => {
             client
                 .execute(
-                    "UPDATE users SET name = $1, email = $2 WHERE id = $3",
-                    &[&user.name, &user.email, &id]
+                    "UPDATE users SET name = $1, email = $2, password = $3 WHERE id = $4",
+                    &[&user.name, &user.email, &user.password, &id]
                 )
                 .unwrap();
 
@@ -177,7 +180,8 @@ fn set_database() -> Result<(), PostgresError> {
         CREATE TABLE IF NOT EXISTS users (
             id SERIAL PRIMARY KEY,
             name VARCHAR NOT NULL,
-            email VARCHAR NOT NULL
+            email VARCHAR NOT NULL,
+            password VARCHAR NOT NULL
         )
     "
     )?;
