@@ -63,6 +63,7 @@ fn handle_client(mut stream: TcpStream) {
                 r if r.starts_with("GET /users") => handle_get_all_request(r),
                 r if r.starts_with("PUT /users/") => handle_put_request(r),
                 r if r.starts_with("DELETE /users/") => handle_delete_request(r),
+                r if r.starts_with("GET /mapel/") => handle_get_request(r),
                 _ => (NOT_FOUND.to_string(), "404 not found".to_string()),
             };
 
