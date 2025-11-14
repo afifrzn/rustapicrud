@@ -14,10 +14,13 @@ struct User {
     name: String,
     email: String,
     password: String,
+}
+
+//Model: Mapel struct
+#[derive(Serialize, Deserialize)]
 struct Mapel {
     id: Option<i32>,
     mapel: String,
-}
 }
 
 //DATABASE URL
