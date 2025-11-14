@@ -27,13 +27,13 @@ services:
     networks:
       - rustapicrud_default
 
-  reactbe:
-    container_name: reactbe
-    image: node:24-alpine
-    restart: always
-    networks:
-      - rustapicrud_default
-    command: ["sh", "-c", "npm install && npm run dev -- --host"]
+  # reactbe:
+  #   container_name: reactbe
+  #   image: node:24-alpine
+  #   restart: always
+  #   networks:
+  #     - rustapicrud_default
+  #   command: ["sh", "-c", "npm install && npm run dev -- --host"]
 
 volumes:
   db_data:
