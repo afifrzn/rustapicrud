@@ -33,10 +33,26 @@ const INTERNAL_ERROR: &str = "HTTP/1.1 500 INTERNAL ERROR\r\n\r\n";
 
 //main function
 fn main() {
-    //Set Database
-    if let Err(_) = set_database() {
-        println!("Error setting database");
-        return;
+    //Set Database with retry logic
+    let max_retries = 10;
+    let mut retry_count = 0;
+    
+    loop {
+        match set_database() {
+            Ok(_) => {
+                println!("Database connected and tables created successfully");
+                break;
+            }
+            Err(e) => {
+                retry_count += 1;
+                if retry_count >= max_retries {
+                    println!("Error setting database after {} retries: {}", max_retries, e);
+                    return;
+                }
+                println!("Database connection attempt {} failed: {}. Retrying in 2 seconds...", retry_count, e);
+                std::thread::sleep(std::time::Duration::from_secs(2));
+            }
+        }
     }
 
     //start server and print port
