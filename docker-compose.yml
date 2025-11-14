@@ -1,14 +1,25 @@
-version: "3.9"
-
 services:
+  rustapp:
+    container_name: rustapp
+    image: francescoxx/rustapp:1.0.0
+    restart: always
+    environment:
+      DATABASE_URL: postgres://postgres:postgres123@db:5432/rustapp
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+    networks:
+      - rustapicrud_default
+
   db:
     image: postgres:12
     container_name: db
     restart: always
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+      POSTGRES_DB: rustapp
     ports:
       - "5432:5432"
     volumes:
@@ -16,25 +27,13 @@ services:
     networks:
       - rustapicrud_default
 
-  rustapp:
-  container_name: rustapp
-  image: francescoxx/rustapp:1.0.0
-  restart: always
-  environment:
-    DATABASE_URL: postgres://postgres:postgres123@db:5432/rustapp
-  depends_on:
-    - db
-  ports:
-    - "8080:8080"
-  networks:
-    - rustapicrud_default
-
-
   reactbe:
     container_name: reactbe
     image: node:24-alpine
+    restart: always
     networks:
       - rustapicrud_default
+    command: ["sh", "-c", "npm install && npm run dev -- --host"]
 
 volumes:
   db_data:
