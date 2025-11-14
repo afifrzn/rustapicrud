@@ -13,6 +13,7 @@ struct User {
     id: Option<i32>,
     name: String,
     email: String,
+    password: String,
 }
 
 //DATABASE URL
@@ -77,8 +78,8 @@ fn handle_post_request(request: &str) -> (String, String) {
         (Ok(user), Ok(mut client)) => {
             client
                 .execute(
-                    "INSERT INTO users (name, email, password) VALUES ($1, $2)",
-                    &[&user.name, &user.email]
+                    "INSERT INTO users (name, email, password) VALUES ($1, $2, $3)",
+                    &[&user.name, &user.email, &user.password]
                 )
                 .unwrap();
 
@@ -144,7 +145,7 @@ fn handle_put_request(request: &str) -> (String, String) {
             client
                 .execute(
                     "UPDATE users SET name = $1, email = $2, password = $3 WHERE id = $4",
-                    &[&user.name, &user.email, &user.password &id]
+                    &[&user.name, &user.email, &user.password, &id]
                 )
                 .unwrap();
 
