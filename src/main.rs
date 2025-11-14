@@ -26,23 +26,29 @@ struct LoginBody {
 // Gunakan env variable dari container
 const DB_URL: &str = env!("DATABASE_URL");
 
-const OK_RESPONSE: &str = "HTTP/1.1 200 OK\r\nContent-Type: application/json\r\n\r\n";
-const NOT_FOUND: &str = "HTTP/1.1 404 NOT FOUND\r\n\r\n";
-const INTERNAL_ERROR: &str = "HTTP/1.1 500 INTERNAL ERROR\r\n\r\n";
-const UNAUTHORIZED: &str = "HTTP/1.1 401 UNAUTHORIZED\r\nContent-Type: application/json\r\n\r\n";
+// HTTP RESPONSES DENGAN CORS
+const OK_RESPONSE: &str = 
+    "HTTP/1.1 200 OK\r\nContent-Type: application/json\r\nAccess-Control-Allow-Origin: *\r\n\r\n";
 
-// Pool global
+const NOT_FOUND: &str = 
+    "HTTP/1.1 404 NOT FOUND\r\nAccess-Control-Allow-Origin: *\r\n\r\n";
+
+const INTERNAL_ERROR: &str = 
+    "HTTP/1.1 500 INTERNAL ERROR\r\nAccess-Control-Allow-Origin: *\r\n\r\n";
+
+const UNAUTHORIZED: &str = 
+    "HTTP/1.1 401 UNAUTHORIZED\r\nContent-Type: application/json\r\nAccess-Control-Allow-Origin: *\r\n\r\n";
+
 type PgPool = Pool<PostgresConnectionManager<NoTls>>;
 
 fn main() {
-    // ------------ INIT CONNECTION POOL ------------
     let manager = PostgresConnectionManager::new(DB_URL.parse().unwrap(), NoTls);
     let pool = Arc::new(PgPool::new(manager).unwrap());
 
     // Init database
     set_database(&pool).expect("Failed to init db");
 
-    // ------------ START SERVER ------------
+    // Start server
     let listener = TcpListener::bind("0.0.0.0:8080").unwrap();
     println!("Server running on port 8080");
 
@@ -63,30 +69,40 @@ fn handle_client(mut stream: TcpStream, pool: Arc<PgPool>) {
     if let Ok(size) = stream.read(&mut buffer) {
         request.push_str(String::from_utf8_lossy(&buffer[..size]).as_ref());
 
-        let (status, content) = match &*request {
-            r if r.starts_with("POST /login")   => handle_login(r, &pool),
-            r if r.starts_with("POST /users")   => handle_create(r, &pool),
-            r if r.starts_with("GET /users/")   => handle_get_by_id(r, &pool),
-            r if r.starts_with("GET /users")    => handle_get_all(&pool),
-            r if r.starts_with("PUT /users/")   => handle_update(r, &pool),
-            r if r.starts_with("DELETE /users/") => handle_delete(r, &pool),
-            _ => (NOT_FOUND.to_string(), "404 not found".to_string()),
+        let (status, content) = if request.starts_with("OPTIONS") {
+            handle_options()
+        } else {
+            match &*request {
+                r if r.starts_with("POST /login")    => handle_login(r, &pool),
+                r if r.starts_with("POST /users")    => handle_create(r, &pool),
+                r if r.starts_with("GET /users/")    => handle_get_by_id(r, &pool),
+                r if r.starts_with("GET /users")     => handle_get_all(&pool),
+                r if r.starts_with("PUT /users/")    => handle_update(r, &pool),
+                r if r.starts_with("DELETE /users/") => handle_delete(r, &pool),
+                _ => (NOT_FOUND.to_string(), "404 not found".to_string()),
+            }
         };
 
         let _ = stream.write_all(format!("{}{}", status, content).as_bytes());
     }
 }
 
-// ---------------- HANDLERS ----------------
+// ================= HANDLERS =================
+
+fn handle_options() -> (String, String) {
+    (
+        "HTTP/1.1 200 OK\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: GET,POST,PUT,DELETE,OPTIONS\r\nAccess-Control-Allow-Headers: Content-Type\r\n\r\n".into(),
+        "".into()
+    )
+}
 
 fn handle_create(req: &str, pool: &PgPool) -> (String, String) {
     let body = match get_user_body(req) {
         Ok(b) => b,
-        Err(_) => return (INTERNAL_ERROR.to_string(), "Invalid body".into()),
+        Err(_) => return (INTERNAL_ERROR.into(), "Invalid body".into()),
     };
 
     let mut client = pool.get().unwrap();
-
     let _ = client.execute(
         "INSERT INTO users (name, email, password) VALUES ($1,$2,$3)",
         &[&body.name, &body.email, &body.password],
@@ -102,7 +118,6 @@ fn handle_login(req: &str, pool: &PgPool) -> (String, String) {
     };
 
     let mut client = pool.get().unwrap();
-
     let rows = client.query(
         "SELECT id,name FROM users WHERE name=$1 AND password=$2",
         &[&body.name, &body.password],
@@ -111,15 +126,9 @@ fn handle_login(req: &str, pool: &PgPool) -> (String, String) {
     match rows {
         Ok(r) if !r.is_empty() => {
             let name: String = r[0].get(1);
-            (
-                OK_RESPONSE.into(),
-                format!("{{\"success\":true,\"name\":\"{}\"}}", name),
-            )
+            (OK_RESPONSE.into(), format!("{{\"success\":true,\"name\":\"{}\"}}", name))
         }
-        _ => (
-            UNAUTHORIZED.into(),
-            "{\"success\":false,\"message\":\"Invalid login\"}".into(),
-        ),
+        _ => (UNAUTHORIZED.into(), "{\"success\":false,\"message\":\"Invalid login\"}".into()),
     }
 }
 
@@ -130,17 +139,11 @@ fn handle_get_by_id(req: &str, pool: &PgPool) -> (String, String) {
     };
 
     let mut client = pool.get().unwrap();
-
     let res = client.query_opt("SELECT * FROM users WHERE id=$1", &[&id]);
 
     match res {
         Ok(Some(row)) => {
-            let user = User {
-                id: row.get(0),
-                name: row.get(1),
-                email: row.get(2),
-                password: row.get(3),
-            };
+            let user = User { id: row.get(0), name: row.get(1), email: row.get(2), password: row.get(3) };
             (OK_RESPONSE.into(), serde_json::to_string(&user).unwrap())
         }
         _ => (NOT_FOUND.into(), "Not found".into()),
@@ -149,61 +152,30 @@ fn handle_get_by_id(req: &str, pool: &PgPool) -> (String, String) {
 
 fn handle_get_all(pool: &PgPool) -> (String, String) {
     let mut client = pool.get().unwrap();
-
     let rows = client.query("SELECT * FROM users", &[]).unwrap();
-
-    let users: Vec<User> = rows
-        .iter()
-        .map(|r| User {
-            id: r.get(0),
-            name: r.get(1),
-            email: r.get(2),
-            password: r.get(3),
-        })
-        .collect();
-
+    let users: Vec<User> = rows.iter().map(|r| User { id: r.get(0), name: r.get(1), email: r.get(2), password: r.get(3) }).collect();
     (OK_RESPONSE.into(), serde_json::to_string(&users).unwrap())
 }
 
 fn handle_update(req: &str, pool: &PgPool) -> (String, String) {
-    let id: i32 = match get_id(req).parse() {
-        Ok(id) => id,
-        Err(_) => return (INTERNAL_ERROR.into(), "Invalid ID".into()),
-    };
-
-    let body = match get_user_body(req) {
-        Ok(b) => b,
-        Err(_) => return (INTERNAL_ERROR.into(), "Invalid body".into()),
-    };
+    let id: i32 = match get_id(req).parse() { Ok(id) => id, Err(_) => return (INTERNAL_ERROR.into(), "Invalid ID".into()) };
+    let body = match get_user_body(req) { Ok(b) => b, Err(_) => return (INTERNAL_ERROR.into(), "Invalid body".into()) };
 
     let mut client = pool.get().unwrap();
-
-    client.execute(
-        "UPDATE users SET name=$1,email=$2,password=$3 WHERE id=$4",
-        &[&body.name, &body.email, &body.password, &id],
-    ).unwrap();
-
+    client.execute("UPDATE users SET name=$1,email=$2,password=$3 WHERE id=$4", &[&body.name, &body.email, &body.password, &id]).unwrap();
     (OK_RESPONSE.into(), "{\"message\":\"updated\"}".into())
 }
 
 fn handle_delete(req: &str, pool: &PgPool) -> (String, String) {
-    let id: i32 = match get_id(req).parse() {
-        Ok(id) => id,
-        Err(_) => return (INTERNAL_ERROR.into(), "Invalid ID".into()),
-    };
-
+    let id: i32 = match get_id(req).parse() { Ok(id) => id, Err(_) => return (INTERNAL_ERROR.into(), "Invalid ID".into()) };
     let mut client = pool.get().unwrap();
-
     let rows = client.execute("DELETE FROM users WHERE id=$1", &[&id]).unwrap();
 
-    if rows == 0 {
-        return (NOT_FOUND.into(), "Not found".into());
-    }
-
+    if rows == 0 { return (NOT_FOUND.into(), "Not found".into()); }
     (OK_RESPONSE.into(), "{\"message\":\"deleted\"}".into())
 }
 
-// ---------------- HELPERS ----------------
+// ================= HELPERS =================
 
 fn set_database(pool: &PgPool) -> Result<(), PostgresError> {
     let mut client = pool.get().unwrap();
@@ -220,14 +192,6 @@ fn set_database(pool: &PgPool) -> Result<(), PostgresError> {
     Ok(())
 }
 
-fn get_id(req: &str) -> &str {
-    req.split("/").nth(2).unwrap_or("").split_whitespace().next().unwrap_or("")
-}
-
-fn get_user_body(req: &str) -> Result<User, serde_json::Error> {
-    serde_json::from_str(req.split("\r\n\r\n").last().unwrap_or(""))
-}
-
-fn get_login_body(req: &str) -> Result<LoginBody, serde_json::Error> {
-    serde_json::from_str(req.split("\r\n\r\n").last().unwrap_or(""))
-}
+fn get_id(req: &str) -> &str { req.split("/").nth(2).unwrap_or("").split_whitespace().next().unwrap_or("") }
+fn get_user_body(req: &str) -> Result<User, serde_json::Error> { serde_json::from_str(req.split("\r\n\r\n").last().unwrap_or("")) }
+fn get_login_body(req: &str) -> Result<LoginBody, serde_json::Error> { serde_json::from_str(req.split("\r\n\r\n").last().unwrap_or("")) }
