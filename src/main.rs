@@ -23,6 +23,13 @@ struct Mapel {
     mapel: String,
 }
 
+#[derive(Serialize, Deserialize)]
+struct Guru {
+    id: Option<i32>,
+    name: String,
+    nomor_telefon: String,
+}
+
 //DATABASE URL
 const DB_URL: &str = env!("DATABASE_URL");
 
@@ -91,6 +98,11 @@ fn handle_client(mut stream: TcpStream) {
                 r if r.starts_with("GET /mapel") => handle_get_all_mapel(r),
                 r if r.starts_with("PUT /mapel/") => handle_put_mapel(r),
                 r if r.starts_with("DELETE /mapel/") => handle_delete_mapel(r),
+                r if r.starts_with("POST /guru") => handle_post_mapel(r),
+                r if r.starts_with("GET /guru/") => handle_get_mapel(r),
+                r if r.starts_with("GET /guru") => handle_get_all_mapel(r),
+                r if r.starts_with("PUT /guru/") => handle_put_mapel(r),
+                r if r.starts_with("DELETE /guru/") => handle_delete_mapel(r),
                 _ => (NOT_FOUND.to_string(), "404 not found".to_string()),
             };
 
@@ -129,6 +141,22 @@ fn handle_post_mapel(request: &str) -> (String, String) {
                 .unwrap();
 
             (OK_RESPONSE.to_string(), "Mapel created".to_string())
+        }
+        _ => (INTERNAL_ERROR.to_string(), "Internal error".to_string()),
+    }
+}
+
+fn handle_post_guru(request: &str) -> (String, String) {
+    match (get_guru_request_body(&request), Client::connect(DB_URL, NoTls)) {
+        (Ok(guru), Ok(mut client)) => {
+            client
+                .execute(
+                    "INSERT INTO guru (name, nomor_telefon) VALUES ($1, $2)",
+                    &[&guru.name, &guru.nomor_telefon]
+                )
+                .unwrap();
+
+            (OK_RESPONSE.to_string(), "Guru created".to_string())
         }
         _ => (INTERNAL_ERROR.to_string(), "Internal error".to_string()),
     }
@@ -176,6 +204,27 @@ fn handle_get_mapel(request: &str) -> (String, String) {
     }
 }
 
+// handle get guru request
+fn handle_get_guru(request: &str) -> (String, String) {
+    match (get_id(&request).parse::<i32>(), Client::connect(DB_URL, NoTls)) {
+        (Ok(id), Ok(mut client)) =>
+            match client.query_one("SELECT * FROM guru WHERE id = $1", &[&id]) {
+                Ok(row) => {
+                    let guru = Guru {
+                        id: row.get(0),
+                        name: row.get(1),
+                        nomor_telefon: row.get(2),
+                    };
+
+                    (OK_RESPONSE.to_string(), serde_json::to_string(&guru).unwrap())
+                }
+                _ => (NOT_FOUND.to_string(), "Guru not found".to_string()),
+            }
+
+        _ => (INTERNAL_ERROR.to_string(), "Internal error".to_string()),
+    }
+}
+
 //handle get all users request
 fn handle_get_all_users(_request: &str) -> (String, String) {
     match Client::connect(DB_URL, NoTls) {
@@ -211,6 +260,26 @@ fn handle_get_all_mapel(_request: &str) -> (String, String) {
             }
 
             (OK_RESPONSE.to_string(), serde_json::to_string(&mapels).unwrap())
+        }
+        _ => (INTERNAL_ERROR.to_string(), "Internal error".to_string()),
+    }
+}
+
+//handle get all gurr
+fn handle_get_all_guru(_request: &str) -> (String, String) {
+    match Client::connect(DB_URL, NoTls) {
+        Ok(mut client) => {
+            let mut guru = Vec::new();
+
+            for row in client.query("SELECT id, name, nomor_telefon FROM guru", &[]).unwrap() {
+                guru.push(Guru {
+                    id: row.get(0),
+                    name: row.get(1),
+                    nomor_telefon: row.get(2),
+                });
+            }
+
+            (OK_RESPONSE.to_string(), serde_json::to_string(&guru).unwrap())
         }
         _ => (INTERNAL_ERROR.to_string(), "Internal error".to_string()),
     }
@@ -262,6 +331,29 @@ fn handle_put_mapel(request: &str) -> (String, String) {
     }
 }
 
+//handle put guru request
+fn handle_put_user(request: &str) -> (String, String) {
+    match
+        (
+            get_id(&request).parse::<i32>(),
+            get_guru_request_body(&request),
+            Client::connect(DB_URL, NoTls),
+        )
+    {
+        (Ok(id), Ok(guru), Ok(mut client)) => {
+            client
+                .execute(
+                    "UPDATE guru SET name = $1, nomor_telefon = $2 WHERE id = $3",
+                    &[&guru.name, &user.nomor_telefon, &id]
+                )
+                .unwrap();
+
+            (OK_RESPONSE.to_string(), "Guru updated".to_string())
+        }
+        _ => (INTERNAL_ERROR.to_string(), "Internal error".to_string()),
+    }
+}
+
 //handle delete user request
 fn handle_delete_user(request: &str) -> (String, String) {
     match (get_id(&request).parse::<i32>(), Client::connect(DB_URL, NoTls)) {
@@ -296,6 +388,23 @@ fn handle_delete_mapel(request: &str) -> (String, String) {
     }
 }
 
+//handle delete guru request
+fn handle_delete_guru(request: &str) -> (String, String) {
+    match (get_id(&request).parse::<i32>(), Client::connect(DB_URL, NoTls)) {
+        (Ok(id), Ok(mut client)) => {
+            let rows_affected = client.execute("DELETE FROM guru WHERE id = $1", &[&id]).unwrap();
+
+            //if rows affected is 0, user not found
+            if rows_affected == 0 {
+                return (NOT_FOUND.to_string(), "Guru not found".to_string());
+            }
+
+            (OK_RESPONSE.to_string(), "Guru deleted".to_string())
+        }
+        _ => (INTERNAL_ERROR.to_string(), "Internal error".to_string()),
+    }
+}
+
 //db setup
 fn set_database() -> Result<(), PostgresError> {
     let mut client = Client::connect(DB_URL, NoTls)?;
@@ -311,6 +420,11 @@ fn set_database() -> Result<(), PostgresError> {
             id SERIAL PRIMARY KEY,
             mapel VARCHAR NOT NULL
         );
+        CREATE TABLE IF NOT EXISTS, guru (
+            id SERIAL PRIMARY KEY,
+            nama VARCHAR NOT NULL,
+            no_telefon VARCHAR NOT NULL
+    );
     "
     )?;
     Ok(())
@@ -328,5 +442,10 @@ fn get_user_request_body(request: &str) -> Result<User, serde_json::Error> {
 
 //deserialize mapel from request body without id
 fn get_mapel_request_body(request: &str) -> Result<Mapel, serde_json::Error> {
+    serde_json::from_str(request.split("\r\n\r\n").last().unwrap_or_default())
+}
+
+//deserialize guru from request body without id
+fn get_guru_request_body(request: &str) -> Result<Guru, serde_json::Error> {
     serde_json::from_str(request.split("\r\n\r\n").last().unwrap_or_default())
 }
