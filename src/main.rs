@@ -332,7 +332,7 @@ fn handle_put_mapel(request: &str) -> (String, String) {
 }
 
 //handle put guru request
-fn handle_put_user(request: &str) -> (String, String) {
+fn handle_put_guru(request: &str) -> (String, String) {
     match
         (
             get_id(&request).parse::<i32>(),
@@ -344,7 +344,7 @@ fn handle_put_user(request: &str) -> (String, String) {
             client
                 .execute(
                     "UPDATE guru SET name = $1, nomor_telefon = $2 WHERE id = $3",
-                    &[&guru.name, &user.nomor_telefon, &id]
+                    &[&guru.name, &guru.nomor_telefon, &id]
                 )
                 .unwrap();
 

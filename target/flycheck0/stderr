@@ -1,5 +1,5 @@
-   0.078735800s  INFO prepare_target{force=false package_id=rust-api v0.1.0 (C:\Users\afif\Documents\rust-api) target="rust-api"}: cargo::core::compiler::fingerprint: fingerprint error for rust-api v0.1.0 (C:\Users\afif\Documents\rust-api)/Check { test: false }/TargetInner { name: "rust-api", doc: true, ..: with_path("C:\\Users\\afif\\Documents\\rust-api\\src\\main.rs", Edition2024) }
-   0.078790700s  INFO prepare_target{force=false package_id=rust-api v0.1.0 (C:\Users\afif\Documents\rust-api) target="rust-api"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\rust-api-434bf97d08258a83\bin-rust-api`
+   0.339349600s  INFO prepare_target{force=false package_id=rust-api v0.1.0 (C:\Users\afif\Documents\rust-api) target="rust-api"}: cargo::core::compiler::fingerprint: fingerprint error for rust-api v0.1.0 (C:\Users\afif\Documents\rust-api)/Check { test: false }/TargetInner { name: "rust-api", doc: true, ..: with_path("C:\\Users\\afif\\Documents\\rust-api\\src\\main.rs", Edition2024) }
+   0.339657900s  INFO prepare_target{force=false package_id=rust-api v0.1.0 (C:\Users\afif\Documents\rust-api) target="rust-api"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\rust-api-434bf97d08258a83\bin-rust-api`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -26,8 +26,8 @@ Stack backtrace:
   18: git_midx_writer_dump
   19: BaseThreadInitThunk
   20: RtlUserThreadStart
-   0.086979900s  INFO prepare_target{force=false package_id=postgres v0.19.12 target="postgres"}: cargo::core::compiler::fingerprint: fingerprint error for postgres v0.19.12/Check { test: false }/TargetInner { ..: lib_target("postgres", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\postgres-0.19.12\\src\\lib.rs", Edition2021) }
-   0.087006000s  INFO prepare_target{force=false package_id=postgres v0.19.12 target="postgres"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\postgres-2f5e18f5a95b16ae\lib-postgres`
+   0.352910000s  INFO prepare_target{force=false package_id=postgres v0.19.12 target="postgres"}: cargo::core::compiler::fingerprint: fingerprint error for postgres v0.19.12/Check { test: false }/TargetInner { ..: lib_target("postgres", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\postgres-0.19.12\\src\\lib.rs", Edition2021) }
+   0.353206300s  INFO prepare_target{force=false package_id=postgres v0.19.12 target="postgres"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\postgres-2f5e18f5a95b16ae\lib-postgres`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -55,8 +55,8 @@ Stack backtrace:
   19: git_midx_writer_dump
   20: BaseThreadInitThunk
   21: RtlUserThreadStart
-   0.088249100s  INFO prepare_target{force=false package_id=tokio v1.48.0 target="tokio"}: cargo::core::compiler::fingerprint: fingerprint error for tokio v1.48.0/Check { test: false }/TargetInner { ..: lib_target("tokio", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.48.0\\src\\lib.rs", Edition2021) }
-   0.088265900s  INFO prepare_target{force=false package_id=tokio v1.48.0 target="tokio"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\tokio-c5a0755108664921\lib-tokio`
+   0.354756700s  INFO prepare_target{force=false package_id=tokio v1.48.0 target="tokio"}: cargo::core::compiler::fingerprint: fingerprint error for tokio v1.48.0/Check { test: false }/TargetInner { ..: lib_target("tokio", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.48.0\\src\\lib.rs", Edition2021) }
+   0.354778300s  INFO prepare_target{force=false package_id=tokio v1.48.0 target="tokio"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\tokio-c5a0755108664921\lib-tokio`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -85,8 +85,8 @@ Stack backtrace:
   20: git_midx_writer_dump
   21: BaseThreadInitThunk
   22: RtlUserThreadStart
-   0.088846900s  INFO prepare_target{force=false package_id=socket2 v0.6.1 target="socket2"}: cargo::core::compiler::fingerprint: fingerprint error for socket2 v0.6.1/Check { test: false }/TargetInner { ..: lib_target("socket2", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\socket2-0.6.1\\src\\lib.rs", Edition2021) }
-   0.088861900s  INFO prepare_target{force=false package_id=socket2 v0.6.1 target="socket2"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\socket2-e3a89a5d7fb9330d\lib-socket2`
+   0.355385800s  INFO prepare_target{force=false package_id=socket2 v0.6.1 target="socket2"}: cargo::core::compiler::fingerprint: fingerprint error for socket2 v0.6.1/Check { test: false }/TargetInner { ..: lib_target("socket2", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\socket2-0.6.1\\src\\lib.rs", Edition2021) }
+   0.355406600s  INFO prepare_target{force=false package_id=socket2 v0.6.1 target="socket2"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\socket2-e3a89a5d7fb9330d\lib-socket2`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -116,8 +116,8 @@ Stack backtrace:
   21: git_midx_writer_dump
   22: BaseThreadInitThunk
   23: RtlUserThreadStart
-   0.089072900s  INFO prepare_target{force=false package_id=windows-sys v0.60.2 target="windows_sys"}: cargo::core::compiler::fingerprint: fingerprint error for windows-sys v0.60.2/Check { test: false }/TargetInner { tested: false, doctest: false, ..: lib_target("windows_sys", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-sys-0.60.2\\src\\lib.rs", Edition2021) }
-   0.089085700s  INFO prepare_target{force=false package_id=windows-sys v0.60.2 target="windows_sys"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\windows-sys-855029f0a8606954\lib-windows_sys`
+   0.355632300s  INFO prepare_target{force=false package_id=windows-sys v0.60.2 target="windows_sys"}: cargo::core::compiler::fingerprint: fingerprint error for windows-sys v0.60.2/Check { test: false }/TargetInner { tested: false, doctest: false, ..: lib_target("windows_sys", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-sys-0.60.2\\src\\lib.rs", Edition2021) }
+   0.355644600s  INFO prepare_target{force=false package_id=windows-sys v0.60.2 target="windows_sys"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\windows-sys-855029f0a8606954\lib-windows_sys`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -148,8 +148,8 @@ Stack backtrace:
   22: git_midx_writer_dump
   23: BaseThreadInitThunk
   24: RtlUserThreadStart
-   0.089311400s  INFO prepare_target{force=false package_id=windows-targets v0.53.5 target="windows_targets"}: cargo::core::compiler::fingerprint: fingerprint error for windows-targets v0.53.5/Check { test: false }/TargetInner { ..: lib_target("windows_targets", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.53.5\\src\\lib.rs", Edition2021) }
-   0.089322800s  INFO prepare_target{force=false package_id=windows-targets v0.53.5 target="windows_targets"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\windows-targets-49f4081cb23f0d18\lib-windows_targets`
+   0.355874900s  INFO prepare_target{force=false package_id=windows-targets v0.53.5 target="windows_targets"}: cargo::core::compiler::fingerprint: fingerprint error for windows-targets v0.53.5/Check { test: false }/TargetInner { ..: lib_target("windows_targets", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.53.5\\src\\lib.rs", Edition2021) }
+   0.355887000s  INFO prepare_target{force=false package_id=windows-targets v0.53.5 target="windows_targets"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\windows-targets-49f4081cb23f0d18\lib-windows_targets`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -181,8 +181,8 @@ Stack backtrace:
   23: git_midx_writer_dump
   24: BaseThreadInitThunk
   25: RtlUserThreadStart
-   0.089500900s  INFO prepare_target{force=false package_id=windows_x86_64_msvc v0.53.1 target="windows_x86_64_msvc"}: cargo::core::compiler::fingerprint: fingerprint error for windows_x86_64_msvc v0.53.1/Check { test: false }/TargetInner { ..: lib_target("windows_x86_64_msvc", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.53.1\\src\\lib.rs", Edition2021) }
-   0.089512300s  INFO prepare_target{force=false package_id=windows_x86_64_msvc v0.53.1 target="windows_x86_64_msvc"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\windows_x86_64_msvc-2ace87c4d010f1aa\lib-windows_x86_64_msvc`
+   0.356085600s  INFO prepare_target{force=false package_id=windows_x86_64_msvc v0.53.1 target="windows_x86_64_msvc"}: cargo::core::compiler::fingerprint: fingerprint error for windows_x86_64_msvc v0.53.1/Check { test: false }/TargetInner { ..: lib_target("windows_x86_64_msvc", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.53.1\\src\\lib.rs", Edition2021) }
+   0.356096900s  INFO prepare_target{force=false package_id=windows_x86_64_msvc v0.53.1 target="windows_x86_64_msvc"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\windows_x86_64_msvc-2ace87c4d010f1aa\lib-windows_x86_64_msvc`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -215,8 +215,8 @@ Stack backtrace:
   24: git_midx_writer_dump
   25: BaseThreadInitThunk
   26: RtlUserThreadStart
-   0.089987000s  INFO prepare_target{force=false package_id=windows_x86_64_msvc v0.53.1 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for windows_x86_64_msvc v0.53.1/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.53.1\\build.rs", Edition2021) }
-   0.090003900s  INFO prepare_target{force=false package_id=windows_x86_64_msvc v0.53.1 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\windows_x86_64_msvc-0864289754573314\run-build-script-build-script-build`
+   0.356934200s  INFO prepare_target{force=false package_id=windows_x86_64_msvc v0.53.1 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for windows_x86_64_msvc v0.53.1/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.53.1\\build.rs", Edition2021) }
+   0.356950000s  INFO prepare_target{force=false package_id=windows_x86_64_msvc v0.53.1 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\windows_x86_64_msvc-0864289754573314\run-build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -251,8 +251,8 @@ Stack backtrace:
   26: git_midx_writer_dump
   27: BaseThreadInitThunk
   28: RtlUserThreadStart
-   0.090107400s  INFO prepare_target{force=false package_id=windows_x86_64_msvc v0.53.1 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for windows_x86_64_msvc v0.53.1/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.53.1\\build.rs", Edition2021) }
-   0.090117100s  INFO prepare_target{force=false package_id=windows_x86_64_msvc v0.53.1 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\windows_x86_64_msvc-9b7be962915628f9\build-script-build-script-build`
+   0.357588200s  INFO prepare_target{force=false package_id=windows_x86_64_msvc v0.53.1 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for windows_x86_64_msvc v0.53.1/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.53.1\\build.rs", Edition2021) }
+   0.357604200s  INFO prepare_target{force=false package_id=windows_x86_64_msvc v0.53.1 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\windows_x86_64_msvc-9b7be962915628f9\build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -287,8 +287,8 @@ Stack backtrace:
   26: git_midx_writer_dump
   27: BaseThreadInitThunk
   28: RtlUserThreadStart
-   0.090529700s  INFO prepare_target{force=false package_id=tokio-postgres v0.7.15 target="tokio_postgres"}: cargo::core::compiler::fingerprint: fingerprint error for tokio-postgres v0.7.15/Check { test: false }/TargetInner { tested: false, ..: lib_target("tokio_postgres", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-postgres-0.7.15\\src\\lib.rs", Edition2021) }
-   0.090544200s  INFO prepare_target{force=false package_id=tokio-postgres v0.7.15 target="tokio_postgres"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\tokio-postgres-a954a16fed279b3f\lib-tokio_postgres`
+   0.357823700s  INFO prepare_target{force=false package_id=tokio-postgres v0.7.15 target="tokio_postgres"}: cargo::core::compiler::fingerprint: fingerprint error for tokio-postgres v0.7.15/Check { test: false }/TargetInner { tested: false, ..: lib_target("tokio_postgres", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-postgres-0.7.15\\src\\lib.rs", Edition2021) }
+   0.357836100s  INFO prepare_target{force=false package_id=tokio-postgres v0.7.15 target="tokio_postgres"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\tokio-postgres-a954a16fed279b3f\lib-tokio_postgres`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -317,8 +317,8 @@ Stack backtrace:
   20: git_midx_writer_dump
   21: BaseThreadInitThunk
   22: RtlUserThreadStart
-   0.090925600s  INFO prepare_target{force=false package_id=async-trait v0.1.89 target="async_trait"}: cargo::core::compiler::fingerprint: fingerprint error for async-trait v0.1.89/Build/TargetInner { for_host: true, proc_macro: true, ..: lib_target("async_trait", ["proc-macro"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\async-trait-0.1.89\\src\\lib.rs", Edition2021) }
-   0.090939800s  INFO prepare_target{force=false package_id=async-trait v0.1.89 target="async_trait"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\async-trait-f9227b3fd2583f76\lib-async_trait`
+   0.358243600s  INFO prepare_target{force=false package_id=async-trait v0.1.89 target="async_trait"}: cargo::core::compiler::fingerprint: fingerprint error for async-trait v0.1.89/Build/TargetInner { for_host: true, proc_macro: true, ..: lib_target("async_trait", ["proc-macro"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\async-trait-0.1.89\\src\\lib.rs", Edition2021) }
+   0.358256400s  INFO prepare_target{force=false package_id=async-trait v0.1.89 target="async_trait"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\async-trait-f9227b3fd2583f76\lib-async_trait`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -348,8 +348,8 @@ Stack backtrace:
   21: git_midx_writer_dump
   22: BaseThreadInitThunk
   23: RtlUserThreadStart
-   0.091159800s  INFO prepare_target{force=false package_id=proc-macro2 v1.0.103 target="proc_macro2"}: cargo::core::compiler::fingerprint: fingerprint error for proc-macro2 v1.0.103/Build/TargetInner { ..: lib_target("proc_macro2", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.103\\src\\lib.rs", Edition2021) }
-   0.091176200s  INFO prepare_target{force=false package_id=proc-macro2 v1.0.103 target="proc_macro2"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\proc-macro2-3dd8df4566541d40\lib-proc_macro2`
+   0.358476400s  INFO prepare_target{force=false package_id=proc-macro2 v1.0.103 target="proc_macro2"}: cargo::core::compiler::fingerprint: fingerprint error for proc-macro2 v1.0.103/Build/TargetInner { ..: lib_target("proc_macro2", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.103\\src\\lib.rs", Edition2021) }
+   0.358487100s  INFO prepare_target{force=false package_id=proc-macro2 v1.0.103 target="proc_macro2"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\proc-macro2-3dd8df4566541d40\lib-proc_macro2`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -380,8 +380,8 @@ Stack backtrace:
   22: git_midx_writer_dump
   23: BaseThreadInitThunk
   24: RtlUserThreadStart
-   0.091694900s  INFO prepare_target{force=false package_id=proc-macro2 v1.0.103 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for proc-macro2 v1.0.103/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.103\\build.rs", Edition2021) }
-   0.091710500s  INFO prepare_target{force=false package_id=proc-macro2 v1.0.103 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\proc-macro2-d397f9928fbd58b2\run-build-script-build-script-build`
+   0.358941900s  INFO prepare_target{force=false package_id=proc-macro2 v1.0.103 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for proc-macro2 v1.0.103/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.103\\build.rs", Edition2021) }
+   0.358954600s  INFO prepare_target{force=false package_id=proc-macro2 v1.0.103 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\proc-macro2-d397f9928fbd58b2\run-build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -414,8 +414,8 @@ Stack backtrace:
   24: git_midx_writer_dump
   25: BaseThreadInitThunk
   26: RtlUserThreadStart
-   0.091819000s  INFO prepare_target{force=false package_id=proc-macro2 v1.0.103 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for proc-macro2 v1.0.103/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.103\\build.rs", Edition2021) }
-   0.091828800s  INFO prepare_target{force=false package_id=proc-macro2 v1.0.103 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\proc-macro2-8c6f04521555d3d2\build-script-build-script-build`
+   0.359042400s  INFO prepare_target{force=false package_id=proc-macro2 v1.0.103 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for proc-macro2 v1.0.103/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.103\\build.rs", Edition2021) }
+   0.359049500s  INFO prepare_target{force=false package_id=proc-macro2 v1.0.103 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\proc-macro2-8c6f04521555d3d2\build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -448,8 +448,8 @@ Stack backtrace:
   24: git_midx_writer_dump
   25: BaseThreadInitThunk
   26: RtlUserThreadStart
-   0.092347100s  INFO prepare_target{force=false package_id=quote v1.0.42 target="quote"}: cargo::core::compiler::fingerprint: fingerprint error for quote v1.0.42/Build/TargetInner { ..: lib_target("quote", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.42\\src\\lib.rs", Edition2018) }
-   0.092365600s  INFO prepare_target{force=false package_id=quote v1.0.42 target="quote"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\quote-a5fc88b8c47084ed\lib-quote`
+   0.359492300s  INFO prepare_target{force=false package_id=quote v1.0.42 target="quote"}: cargo::core::compiler::fingerprint: fingerprint error for quote v1.0.42/Build/TargetInner { ..: lib_target("quote", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.42\\src\\lib.rs", Edition2018) }
+   0.359511700s  INFO prepare_target{force=false package_id=quote v1.0.42 target="quote"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\quote-a5fc88b8c47084ed\lib-quote`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -480,8 +480,8 @@ Stack backtrace:
   22: git_midx_writer_dump
   23: BaseThreadInitThunk
   24: RtlUserThreadStart
-   0.093529700s  INFO prepare_target{force=false package_id=quote v1.0.42 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for quote v1.0.42/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.42\\build.rs", Edition2018) }
-   0.093558700s  INFO prepare_target{force=false package_id=quote v1.0.42 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\quote-776391909d1f9746\run-build-script-build-script-build`
+   0.360010300s  INFO prepare_target{force=false package_id=quote v1.0.42 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for quote v1.0.42/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.42\\build.rs", Edition2018) }
+   0.360024200s  INFO prepare_target{force=false package_id=quote v1.0.42 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\quote-776391909d1f9746\run-build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -514,8 +514,8 @@ Stack backtrace:
   24: git_midx_writer_dump
   25: BaseThreadInitThunk
   26: RtlUserThreadStart
-   0.093756100s  INFO prepare_target{force=false package_id=quote v1.0.42 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for quote v1.0.42/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.42\\build.rs", Edition2018) }
-   0.093771300s  INFO prepare_target{force=false package_id=quote v1.0.42 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\quote-529f8dbcd0aede73\build-script-build-script-build`
+   0.360124200s  INFO prepare_target{force=false package_id=quote v1.0.42 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for quote v1.0.42/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.42\\build.rs", Edition2018) }
+   0.360131900s  INFO prepare_target{force=false package_id=quote v1.0.42 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\quote-529f8dbcd0aede73\build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -548,8 +548,8 @@ Stack backtrace:
   24: git_midx_writer_dump
   25: BaseThreadInitThunk
   26: RtlUserThreadStart
-   0.094249800s  INFO prepare_target{force=false package_id=syn v2.0.110 target="syn"}: cargo::core::compiler::fingerprint: fingerprint error for syn v2.0.110/Build/TargetInner { ..: lib_target("syn", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.110\\src\\lib.rs", Edition2021) }
-   0.094267900s  INFO prepare_target{force=false package_id=syn v2.0.110 target="syn"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\syn-fd36a27b5143f496\lib-syn`
+   0.360308600s  INFO prepare_target{force=false package_id=syn v2.0.110 target="syn"}: cargo::core::compiler::fingerprint: fingerprint error for syn v2.0.110/Build/TargetInner { ..: lib_target("syn", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.110\\src\\lib.rs", Edition2021) }
+   0.360319600s  INFO prepare_target{force=false package_id=syn v2.0.110 target="syn"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\syn-fd36a27b5143f496\lib-syn`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -580,8 +580,8 @@ Stack backtrace:
   22: git_midx_writer_dump
   23: BaseThreadInitThunk
   24: RtlUserThreadStart
-   0.094885600s  INFO prepare_target{force=false package_id=parking_lot v0.12.5 target="parking_lot"}: cargo::core::compiler::fingerprint: fingerprint error for parking_lot v0.12.5/Check { test: false }/TargetInner { ..: lib_target("parking_lot", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot-0.12.5\\src\\lib.rs", Edition2021) }
-   0.094925500s  INFO prepare_target{force=false package_id=parking_lot v0.12.5 target="parking_lot"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\parking_lot-33909b00fd6e7f22\lib-parking_lot`
+   0.360794600s  INFO prepare_target{force=false package_id=parking_lot v0.12.5 target="parking_lot"}: cargo::core::compiler::fingerprint: fingerprint error for parking_lot v0.12.5/Check { test: false }/TargetInner { ..: lib_target("parking_lot", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot-0.12.5\\src\\lib.rs", Edition2021) }
+   0.360807900s  INFO prepare_target{force=false package_id=parking_lot v0.12.5 target="parking_lot"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\parking_lot-33909b00fd6e7f22\lib-parking_lot`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -611,8 +611,8 @@ Stack backtrace:
   21: git_midx_writer_dump
   22: BaseThreadInitThunk
   23: RtlUserThreadStart
-   0.095676800s  INFO prepare_target{force=false package_id=parking_lot_core v0.9.12 target="parking_lot_core"}: cargo::core::compiler::fingerprint: fingerprint error for parking_lot_core v0.9.12/Check { test: false }/TargetInner { ..: lib_target("parking_lot_core", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.12\\src\\lib.rs", Edition2021) }
-   0.095708700s  INFO prepare_target{force=false package_id=parking_lot_core v0.9.12 target="parking_lot_core"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\parking_lot_core-1e79fb016d34c4db\lib-parking_lot_core`
+   0.361284000s  INFO prepare_target{force=false package_id=parking_lot_core v0.9.12 target="parking_lot_core"}: cargo::core::compiler::fingerprint: fingerprint error for parking_lot_core v0.9.12/Check { test: false }/TargetInner { ..: lib_target("parking_lot_core", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.12\\src\\lib.rs", Edition2021) }
+   0.361297300s  INFO prepare_target{force=false package_id=parking_lot_core v0.9.12 target="parking_lot_core"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\parking_lot_core-1e79fb016d34c4db\lib-parking_lot_core`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -643,8 +643,8 @@ Stack backtrace:
   22: git_midx_writer_dump
   23: BaseThreadInitThunk
   24: RtlUserThreadStart
-   0.096417000s  INFO prepare_target{force=false package_id=parking_lot_core v0.9.12 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for parking_lot_core v0.9.12/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.12\\build.rs", Edition2021) }
-   0.096433100s  INFO prepare_target{force=false package_id=parking_lot_core v0.9.12 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\parking_lot_core-4d1a1fc4f09b356d\run-build-script-build-script-build`
+   0.361879100s  INFO prepare_target{force=false package_id=parking_lot_core v0.9.12 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for parking_lot_core v0.9.12/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.12\\build.rs", Edition2021) }
+   0.361892400s  INFO prepare_target{force=false package_id=parking_lot_core v0.9.12 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\parking_lot_core-4d1a1fc4f09b356d\run-build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -677,8 +677,8 @@ Stack backtrace:
   24: git_midx_writer_dump
   25: BaseThreadInitThunk
   26: RtlUserThreadStart
-   0.096543500s  INFO prepare_target{force=false package_id=parking_lot_core v0.9.12 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for parking_lot_core v0.9.12/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.12\\build.rs", Edition2021) }
-   0.096553100s  INFO prepare_target{force=false package_id=parking_lot_core v0.9.12 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\parking_lot_core-ae5eb7cd066c91d0\build-script-build-script-build`
+   0.361984900s  INFO prepare_target{force=false package_id=parking_lot_core v0.9.12 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for parking_lot_core v0.9.12/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.12\\build.rs", Edition2021) }
+   0.361994500s  INFO prepare_target{force=false package_id=parking_lot_core v0.9.12 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\parking_lot_core-ae5eb7cd066c91d0\build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -711,8 +711,8 @@ Stack backtrace:
   24: git_midx_writer_dump
   25: BaseThreadInitThunk
   26: RtlUserThreadStart
-   0.097419300s  INFO prepare_target{force=false package_id=postgres-protocol v0.6.9 target="postgres_protocol"}: cargo::core::compiler::fingerprint: fingerprint error for postgres-protocol v0.6.9/Check { test: false }/TargetInner { ..: lib_target("postgres_protocol", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\postgres-protocol-0.6.9\\src\\lib.rs", Edition2021) }
-   0.097447300s  INFO prepare_target{force=false package_id=postgres-protocol v0.6.9 target="postgres_protocol"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\postgres-protocol-0b6e9cdd5c1e73a7\lib-postgres_protocol`
+   0.362962900s  INFO prepare_target{force=false package_id=postgres-protocol v0.6.9 target="postgres_protocol"}: cargo::core::compiler::fingerprint: fingerprint error for postgres-protocol v0.6.9/Check { test: false }/TargetInner { ..: lib_target("postgres_protocol", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\postgres-protocol-0.6.9\\src\\lib.rs", Edition2021) }
+   0.362986800s  INFO prepare_target{force=false package_id=postgres-protocol v0.6.9 target="postgres_protocol"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\postgres-protocol-0b6e9cdd5c1e73a7\lib-postgres_protocol`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -742,8 +742,8 @@ Stack backtrace:
   21: git_midx_writer_dump
   22: BaseThreadInitThunk
   23: RtlUserThreadStart
-   0.097882600s  INFO prepare_target{force=false package_id=hmac v0.12.1 target="hmac"}: cargo::core::compiler::fingerprint: fingerprint error for hmac v0.12.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("hmac", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hmac-0.12.1\\src\\lib.rs", Edition2018) }
-   0.097896400s  INFO prepare_target{force=false package_id=hmac v0.12.1 target="hmac"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\hmac-3bf32d130cfb6e8b\lib-hmac`
+   0.363871600s  INFO prepare_target{force=false package_id=hmac v0.12.1 target="hmac"}: cargo::core::compiler::fingerprint: fingerprint error for hmac v0.12.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("hmac", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hmac-0.12.1\\src\\lib.rs", Edition2018) }
+   0.363892900s  INFO prepare_target{force=false package_id=hmac v0.12.1 target="hmac"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\hmac-3bf32d130cfb6e8b\lib-hmac`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -774,8 +774,8 @@ Stack backtrace:
   22: git_midx_writer_dump
   23: BaseThreadInitThunk
   24: RtlUserThreadStart
-   0.098112600s  INFO prepare_target{force=false package_id=digest v0.10.7 target="digest"}: cargo::core::compiler::fingerprint: fingerprint error for digest v0.10.7/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("digest", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\digest-0.10.7\\src\\lib.rs", Edition2018) }
-   0.098136500s  INFO prepare_target{force=false package_id=digest v0.10.7 target="digest"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\digest-ab746968d83026fb\lib-digest`
+   0.364194500s  INFO prepare_target{force=false package_id=digest v0.10.7 target="digest"}: cargo::core::compiler::fingerprint: fingerprint error for digest v0.10.7/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("digest", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\digest-0.10.7\\src\\lib.rs", Edition2018) }
+   0.364209800s  INFO prepare_target{force=false package_id=digest v0.10.7 target="digest"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\digest-ab746968d83026fb\lib-digest`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -807,8 +807,8 @@ Stack backtrace:
   23: git_midx_writer_dump
   24: BaseThreadInitThunk
   25: RtlUserThreadStart
-   0.098347300s  INFO prepare_target{force=false package_id=block-buffer v0.10.4 target="block_buffer"}: cargo::core::compiler::fingerprint: fingerprint error for block-buffer v0.10.4/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("block_buffer", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\block-buffer-0.10.4\\src\\lib.rs", Edition2018) }
-   0.098359800s  INFO prepare_target{force=false package_id=block-buffer v0.10.4 target="block_buffer"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\block-buffer-91e18eb0fc3fcf9f\lib-block_buffer`
+   0.364434200s  INFO prepare_target{force=false package_id=block-buffer v0.10.4 target="block_buffer"}: cargo::core::compiler::fingerprint: fingerprint error for block-buffer v0.10.4/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("block_buffer", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\block-buffer-0.10.4\\src\\lib.rs", Edition2018) }
+   0.364446700s  INFO prepare_target{force=false package_id=block-buffer v0.10.4 target="block_buffer"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\block-buffer-91e18eb0fc3fcf9f\lib-block_buffer`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -841,8 +841,8 @@ Stack backtrace:
   24: git_midx_writer_dump
   25: BaseThreadInitThunk
   26: RtlUserThreadStart
-   0.098548300s  INFO prepare_target{force=false package_id=generic-array v0.14.7 target="generic_array"}: cargo::core::compiler::fingerprint: fingerprint error for generic-array v0.14.7/Check { test: false }/TargetInner { ..: lib_target("generic_array", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\generic-array-0.14.7\\src\\lib.rs", Edition2015) }
-   0.098560500s  INFO prepare_target{force=false package_id=generic-array v0.14.7 target="generic_array"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\generic-array-5a59744292a8b15a\lib-generic_array`
+   0.364647400s  INFO prepare_target{force=false package_id=generic-array v0.14.7 target="generic_array"}: cargo::core::compiler::fingerprint: fingerprint error for generic-array v0.14.7/Check { test: false }/TargetInner { ..: lib_target("generic_array", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\generic-array-0.14.7\\src\\lib.rs", Edition2015) }
+   0.364658500s  INFO prepare_target{force=false package_id=generic-array v0.14.7 target="generic_array"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\generic-array-5a59744292a8b15a\lib-generic_array`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -876,8 +876,8 @@ Stack backtrace:
   25: git_midx_writer_dump
   26: BaseThreadInitThunk
   27: RtlUserThreadStart
-   0.098990400s  INFO prepare_target{force=false package_id=generic-array v0.14.7 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for generic-array v0.14.7/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\generic-array-0.14.7\\build.rs", Edition2015) }
-   0.099007000s  INFO prepare_target{force=false package_id=generic-array v0.14.7 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\generic-array-1715b8b35bd6fd93\run-build-script-build-script-build`
+   0.365103900s  INFO prepare_target{force=false package_id=generic-array v0.14.7 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for generic-array v0.14.7/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\generic-array-0.14.7\\build.rs", Edition2015) }
+   0.365116500s  INFO prepare_target{force=false package_id=generic-array v0.14.7 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\generic-array-1715b8b35bd6fd93\run-build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -913,8 +913,8 @@ Stack backtrace:
   27: git_midx_writer_dump
   28: BaseThreadInitThunk
   29: RtlUserThreadStart
-   0.099106800s  INFO prepare_target{force=false package_id=generic-array v0.14.7 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for generic-array v0.14.7/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\generic-array-0.14.7\\build.rs", Edition2015) }
-   0.099116200s  INFO prepare_target{force=false package_id=generic-array v0.14.7 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\generic-array-26e11cedd96322b2\build-script-build-script-build`
+   0.365212000s  INFO prepare_target{force=false package_id=generic-array v0.14.7 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for generic-array v0.14.7/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\generic-array-0.14.7\\build.rs", Edition2015) }
+   0.365220100s  INFO prepare_target{force=false package_id=generic-array v0.14.7 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\generic-array-26e11cedd96322b2\build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -950,8 +950,8 @@ Stack backtrace:
   27: git_midx_writer_dump
   28: BaseThreadInitThunk
   29: RtlUserThreadStart
-   0.099642900s  INFO prepare_target{force=false package_id=typenum v1.19.0 target="typenum"}: cargo::core::compiler::fingerprint: fingerprint error for typenum v1.19.0/Check { test: false }/TargetInner { ..: lib_target("typenum", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.19.0\\src\\lib.rs", Edition2018) }
-   0.099656900s  INFO prepare_target{force=false package_id=typenum v1.19.0 target="typenum"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\typenum-a29e1c3bbbd97c79\lib-typenum`
+   0.365556900s  INFO prepare_target{force=false package_id=typenum v1.19.0 target="typenum"}: cargo::core::compiler::fingerprint: fingerprint error for typenum v1.19.0/Check { test: false }/TargetInner { ..: lib_target("typenum", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.19.0\\src\\lib.rs", Edition2018) }
+   0.365569100s  INFO prepare_target{force=false package_id=typenum v1.19.0 target="typenum"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\typenum-a29e1c3bbbd97c79\lib-typenum`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -986,8 +986,8 @@ Stack backtrace:
   26: git_midx_writer_dump
   27: BaseThreadInitThunk
   28: RtlUserThreadStart
-   0.100094600s  INFO prepare_target{force=false package_id=typenum v1.19.0 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for typenum v1.19.0/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.19.0\\build.rs", Edition2018) }
-   0.100109000s  INFO prepare_target{force=false package_id=typenum v1.19.0 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\typenum-44322a450af4c870\run-build-script-build-script-build`
+   0.366004600s  INFO prepare_target{force=false package_id=typenum v1.19.0 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for typenum v1.19.0/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.19.0\\build.rs", Edition2018) }
+   0.366016600s  INFO prepare_target{force=false package_id=typenum v1.19.0 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\typenum-44322a450af4c870\run-build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1024,8 +1024,8 @@ Stack backtrace:
   28: git_midx_writer_dump
   29: BaseThreadInitThunk
   30: RtlUserThreadStart
-   0.100212900s  INFO prepare_target{force=false package_id=typenum v1.19.0 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for typenum v1.19.0/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.19.0\\build.rs", Edition2018) }
-   0.100222600s  INFO prepare_target{force=false package_id=typenum v1.19.0 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\typenum-bfdb310abef061d5\build-script-build-script-build`
+   0.366110100s  INFO prepare_target{force=false package_id=typenum v1.19.0 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for typenum v1.19.0/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.19.0\\build.rs", Edition2018) }
+   0.366116800s  INFO prepare_target{force=false package_id=typenum v1.19.0 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\typenum-bfdb310abef061d5\build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1062,8 +1062,8 @@ Stack backtrace:
   28: git_midx_writer_dump
   29: BaseThreadInitThunk
   30: RtlUserThreadStart
-   0.100564800s  INFO prepare_target{force=false package_id=crypto-common v0.1.7 target="crypto_common"}: cargo::core::compiler::fingerprint: fingerprint error for crypto-common v0.1.7/Check { test: false }/TargetInner { ..: lib_target("crypto_common", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.1.7\\src\\lib.rs", Edition2018) }
-   0.100578400s  INFO prepare_target{force=false package_id=crypto-common v0.1.7 target="crypto_common"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\crypto-common-07f8d85b7bdd6b25\lib-crypto_common`
+   0.366295700s  INFO prepare_target{force=false package_id=crypto-common v0.1.7 target="crypto_common"}: cargo::core::compiler::fingerprint: fingerprint error for crypto-common v0.1.7/Check { test: false }/TargetInner { ..: lib_target("crypto_common", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.1.7\\src\\lib.rs", Edition2018) }
+   0.366307200s  INFO prepare_target{force=false package_id=crypto-common v0.1.7 target="crypto_common"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\crypto-common-07f8d85b7bdd6b25\lib-crypto_common`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1096,8 +1096,8 @@ Stack backtrace:
   24: git_midx_writer_dump
   25: BaseThreadInitThunk
   26: RtlUserThreadStart
-   0.100895800s  INFO prepare_target{force=false package_id=md-5 v0.10.6 target="md5"}: cargo::core::compiler::fingerprint: fingerprint error for md-5 v0.10.6/Check { test: false }/TargetInner { ..: lib_target("md5", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\md-5-0.10.6\\src\\lib.rs", Edition2018) }
-   0.100908900s  INFO prepare_target{force=false package_id=md-5 v0.10.6 target="md5"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\md-5-0863587cae38a591\lib-md5`
+   0.366636000s  INFO prepare_target{force=false package_id=md-5 v0.10.6 target="md5"}: cargo::core::compiler::fingerprint: fingerprint error for md-5 v0.10.6/Check { test: false }/TargetInner { ..: lib_target("md5", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\md-5-0.10.6\\src\\lib.rs", Edition2018) }
+   0.366647200s  INFO prepare_target{force=false package_id=md-5 v0.10.6 target="md5"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\md-5-0863587cae38a591\lib-md5`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1128,8 +1128,8 @@ Stack backtrace:
   22: git_midx_writer_dump
   23: BaseThreadInitThunk
   24: RtlUserThreadStart
-   0.101198100s  INFO prepare_target{force=false package_id=rand v0.9.2 target="rand"}: cargo::core::compiler::fingerprint: fingerprint error for rand v0.9.2/Check { test: false }/TargetInner { ..: lib_target("rand", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand-0.9.2\\src\\lib.rs", Edition2021) }
-   0.101210800s  INFO prepare_target{force=false package_id=rand v0.9.2 target="rand"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\rand-525bcd0b245dcdbe\lib-rand`
+   0.366995500s  INFO prepare_target{force=false package_id=rand v0.9.2 target="rand"}: cargo::core::compiler::fingerprint: fingerprint error for rand v0.9.2/Check { test: false }/TargetInner { ..: lib_target("rand", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand-0.9.2\\src\\lib.rs", Edition2021) }
+   0.367020200s  INFO prepare_target{force=false package_id=rand v0.9.2 target="rand"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\rand-525bcd0b245dcdbe\lib-rand`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1160,8 +1160,8 @@ Stack backtrace:
   22: git_midx_writer_dump
   23: BaseThreadInitThunk
   24: RtlUserThreadStart
-   0.101420700s  INFO prepare_target{force=false package_id=rand_chacha v0.9.0 target="rand_chacha"}: cargo::core::compiler::fingerprint: fingerprint error for rand_chacha v0.9.0/Check { test: false }/TargetInner { ..: lib_target("rand_chacha", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_chacha-0.9.0\\src\\lib.rs", Edition2021) }
-   0.101433500s  INFO prepare_target{force=false package_id=rand_chacha v0.9.0 target="rand_chacha"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\rand_chacha-77e4a3a05ad3630d\lib-rand_chacha`
+   0.367231100s  INFO prepare_target{force=false package_id=rand_chacha v0.9.0 target="rand_chacha"}: cargo::core::compiler::fingerprint: fingerprint error for rand_chacha v0.9.0/Check { test: false }/TargetInner { ..: lib_target("rand_chacha", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_chacha-0.9.0\\src\\lib.rs", Edition2021) }
+   0.367240400s  INFO prepare_target{force=false package_id=rand_chacha v0.9.0 target="rand_chacha"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\rand_chacha-77e4a3a05ad3630d\lib-rand_chacha`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1193,8 +1193,8 @@ Stack backtrace:
   23: git_midx_writer_dump
   24: BaseThreadInitThunk
   25: RtlUserThreadStart
-   0.101636100s  INFO prepare_target{force=false package_id=ppv-lite86 v0.2.21 target="ppv_lite86"}: cargo::core::compiler::fingerprint: fingerprint error for ppv-lite86 v0.2.21/Check { test: false }/TargetInner { ..: lib_target("ppv_lite86", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ppv-lite86-0.2.21\\src\\lib.rs", Edition2021) }
-   0.101647500s  INFO prepare_target{force=false package_id=ppv-lite86 v0.2.21 target="ppv_lite86"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\ppv-lite86-756f0cf7f1c6e4ae\lib-ppv_lite86`
+   0.367438100s  INFO prepare_target{force=false package_id=ppv-lite86 v0.2.21 target="ppv_lite86"}: cargo::core::compiler::fingerprint: fingerprint error for ppv-lite86 v0.2.21/Check { test: false }/TargetInner { ..: lib_target("ppv_lite86", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ppv-lite86-0.2.21\\src\\lib.rs", Edition2021) }
+   0.367449100s  INFO prepare_target{force=false package_id=ppv-lite86 v0.2.21 target="ppv_lite86"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\ppv-lite86-756f0cf7f1c6e4ae\lib-ppv_lite86`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1227,8 +1227,8 @@ Stack backtrace:
   24: git_midx_writer_dump
   25: BaseThreadInitThunk
   26: RtlUserThreadStart
-   0.101829700s  INFO prepare_target{force=false package_id=zerocopy v0.8.27 target="zerocopy"}: cargo::core::compiler::fingerprint: fingerprint error for zerocopy v0.8.27/Check { test: false }/TargetInner { ..: lib_target("zerocopy", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zerocopy-0.8.27\\src\\lib.rs", Edition2021) }
-   0.101840900s  INFO prepare_target{force=false package_id=zerocopy v0.8.27 target="zerocopy"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\zerocopy-4e510df57c69ed0f\lib-zerocopy`
+   0.367621000s  INFO prepare_target{force=false package_id=zerocopy v0.8.27 target="zerocopy"}: cargo::core::compiler::fingerprint: fingerprint error for zerocopy v0.8.27/Check { test: false }/TargetInner { ..: lib_target("zerocopy", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zerocopy-0.8.27\\src\\lib.rs", Edition2021) }
+   0.367631500s  INFO prepare_target{force=false package_id=zerocopy v0.8.27 target="zerocopy"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\zerocopy-4e510df57c69ed0f\lib-zerocopy`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1262,8 +1262,8 @@ Stack backtrace:
   25: git_midx_writer_dump
   26: BaseThreadInitThunk
   27: RtlUserThreadStart
-   0.102274000s  INFO prepare_target{force=false package_id=zerocopy v0.8.27 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for zerocopy v0.8.27/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zerocopy-0.8.27\\build.rs", Edition2021) }
-   0.102287100s  INFO prepare_target{force=false package_id=zerocopy v0.8.27 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\zerocopy-341a4fb2b32154c1\run-build-script-build-script-build`
+   0.368044800s  INFO prepare_target{force=false package_id=zerocopy v0.8.27 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for zerocopy v0.8.27/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zerocopy-0.8.27\\build.rs", Edition2021) }
+   0.368056400s  INFO prepare_target{force=false package_id=zerocopy v0.8.27 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\zerocopy-341a4fb2b32154c1\run-build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1299,8 +1299,8 @@ Stack backtrace:
   27: git_midx_writer_dump
   28: BaseThreadInitThunk
   29: RtlUserThreadStart
-   0.102390900s  INFO prepare_target{force=false package_id=zerocopy v0.8.27 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for zerocopy v0.8.27/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zerocopy-0.8.27\\build.rs", Edition2021) }
-   0.102400700s  INFO prepare_target{force=false package_id=zerocopy v0.8.27 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\zerocopy-19ca712ccecbf5ff\build-script-build-script-build`
+   0.368159700s  INFO prepare_target{force=false package_id=zerocopy v0.8.27 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for zerocopy v0.8.27/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zerocopy-0.8.27\\build.rs", Edition2021) }
+   0.368166400s  INFO prepare_target{force=false package_id=zerocopy v0.8.27 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\zerocopy-19ca712ccecbf5ff\build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1336,8 +1336,8 @@ Stack backtrace:
   27: git_midx_writer_dump
   28: BaseThreadInitThunk
   29: RtlUserThreadStart
-   0.102734300s  INFO prepare_target{force=false package_id=rand_core v0.9.3 target="rand_core"}: cargo::core::compiler::fingerprint: fingerprint error for rand_core v0.9.3/Check { test: false }/TargetInner { ..: lib_target("rand_core", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_core-0.9.3\\src\\lib.rs", Edition2021) }
-   0.102747700s  INFO prepare_target{force=false package_id=rand_core v0.9.3 target="rand_core"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\rand_core-c0b24b2a07141e2b\lib-rand_core`
+   0.368324500s  INFO prepare_target{force=false package_id=rand_core v0.9.3 target="rand_core"}: cargo::core::compiler::fingerprint: fingerprint error for rand_core v0.9.3/Check { test: false }/TargetInner { ..: lib_target("rand_core", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_core-0.9.3\\src\\lib.rs", Edition2021) }
+   0.368335400s  INFO prepare_target{force=false package_id=rand_core v0.9.3 target="rand_core"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\rand_core-c0b24b2a07141e2b\lib-rand_core`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1370,8 +1370,8 @@ Stack backtrace:
   24: git_midx_writer_dump
   25: BaseThreadInitThunk
   26: RtlUserThreadStart
-   0.102936600s  INFO prepare_target{force=false package_id=getrandom v0.3.4 target="getrandom"}: cargo::core::compiler::fingerprint: fingerprint error for getrandom v0.3.4/Check { test: false }/TargetInner { ..: lib_target("getrandom", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.4\\src\\lib.rs", Edition2021) }
-   0.102947900s  INFO prepare_target{force=false package_id=getrandom v0.3.4 target="getrandom"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\getrandom-6b358047e3c9c75d\lib-getrandom`
+   0.368506100s  INFO prepare_target{force=false package_id=getrandom v0.3.4 target="getrandom"}: cargo::core::compiler::fingerprint: fingerprint error for getrandom v0.3.4/Check { test: false }/TargetInner { ..: lib_target("getrandom", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.4\\src\\lib.rs", Edition2021) }
+   0.368521800s  INFO prepare_target{force=false package_id=getrandom v0.3.4 target="getrandom"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\getrandom-6b358047e3c9c75d\lib-getrandom`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1405,8 +1405,8 @@ Stack backtrace:
   25: git_midx_writer_dump
   26: BaseThreadInitThunk
   27: RtlUserThreadStart
-   0.103403700s  INFO prepare_target{force=false package_id=getrandom v0.3.4 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for getrandom v0.3.4/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.4\\build.rs", Edition2021) }
-   0.103418800s  INFO prepare_target{force=false package_id=getrandom v0.3.4 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\getrandom-1b6e0de25c32b6d3\run-build-script-build-script-build`
+   0.368915500s  INFO prepare_target{force=false package_id=getrandom v0.3.4 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for getrandom v0.3.4/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.4\\build.rs", Edition2021) }
+   0.368927200s  INFO prepare_target{force=false package_id=getrandom v0.3.4 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\getrandom-1b6e0de25c32b6d3\run-build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1442,8 +1442,8 @@ Stack backtrace:
   27: git_midx_writer_dump
   28: BaseThreadInitThunk
   29: RtlUserThreadStart
-   0.103534000s  INFO prepare_target{force=false package_id=getrandom v0.3.4 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for getrandom v0.3.4/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.4\\build.rs", Edition2021) }
-   0.103544100s  INFO prepare_target{force=false package_id=getrandom v0.3.4 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\getrandom-0a1eed9e0dde72eb\build-script-build-script-build`
+   0.369015400s  INFO prepare_target{force=false package_id=getrandom v0.3.4 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for getrandom v0.3.4/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.4\\build.rs", Edition2021) }
+   0.369021900s  INFO prepare_target{force=false package_id=getrandom v0.3.4 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\getrandom-0a1eed9e0dde72eb\build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1479,8 +1479,8 @@ Stack backtrace:
   27: git_midx_writer_dump
   28: BaseThreadInitThunk
   29: RtlUserThreadStart
-   0.103904600s  INFO prepare_target{force=false package_id=sha2 v0.10.9 target="sha2"}: cargo::core::compiler::fingerprint: fingerprint error for sha2 v0.10.9/Check { test: false }/TargetInner { ..: lib_target("sha2", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\sha2-0.10.9\\src\\lib.rs", Edition2018) }
-   0.103918400s  INFO prepare_target{force=false package_id=sha2 v0.10.9 target="sha2"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\sha2-c8e2893136845cbb\lib-sha2`
+   0.369186500s  INFO prepare_target{force=false package_id=sha2 v0.10.9 target="sha2"}: cargo::core::compiler::fingerprint: fingerprint error for sha2 v0.10.9/Check { test: false }/TargetInner { ..: lib_target("sha2", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\sha2-0.10.9\\src\\lib.rs", Edition2018) }
+   0.369197400s  INFO prepare_target{force=false package_id=sha2 v0.10.9 target="sha2"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\sha2-c8e2893136845cbb\lib-sha2`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1511,8 +1511,8 @@ Stack backtrace:
   22: git_midx_writer_dump
   23: BaseThreadInitThunk
   24: RtlUserThreadStart
-   0.104906600s  INFO prepare_target{force=false package_id=postgres-types v0.2.11 target="postgres_types"}: cargo::core::compiler::fingerprint: fingerprint error for postgres-types v0.2.11/Check { test: false }/TargetInner { ..: lib_target("postgres_types", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\postgres-types-0.2.11\\src\\lib.rs", Edition2021) }
-   0.104930700s  INFO prepare_target{force=false package_id=postgres-types v0.2.11 target="postgres_types"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\postgres-types-bb44b2ad6ddc9573\lib-postgres_types`
+   0.370228100s  INFO prepare_target{force=false package_id=postgres-types v0.2.11 target="postgres_types"}: cargo::core::compiler::fingerprint: fingerprint error for postgres-types v0.2.11/Check { test: false }/TargetInner { ..: lib_target("postgres_types", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\postgres-types-0.2.11\\src\\lib.rs", Edition2021) }
+   0.370243400s  INFO prepare_target{force=false package_id=postgres-types v0.2.11 target="postgres_types"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\postgres-types-bb44b2ad6ddc9573\lib-postgres_types`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1542,8 +1542,8 @@ Stack backtrace:
   21: git_midx_writer_dump
   22: BaseThreadInitThunk
   23: RtlUserThreadStart
-   0.105404100s  INFO prepare_target{force=false package_id=tokio-util v0.7.17 target="tokio_util"}: cargo::core::compiler::fingerprint: fingerprint error for tokio-util v0.7.17/Check { test: false }/TargetInner { ..: lib_target("tokio_util", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-util-0.7.17\\src\\lib.rs", Edition2021) }
-   0.105425300s  INFO prepare_target{force=false package_id=tokio-util v0.7.17 target="tokio_util"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\tokio-util-42983a0f64b73c1c\lib-tokio_util`
+   0.370565700s  INFO prepare_target{force=false package_id=tokio-util v0.7.17 target="tokio_util"}: cargo::core::compiler::fingerprint: fingerprint error for tokio-util v0.7.17/Check { test: false }/TargetInner { ..: lib_target("tokio_util", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-util-0.7.17\\src\\lib.rs", Edition2021) }
+   0.370577600s  INFO prepare_target{force=false package_id=tokio-util v0.7.17 target="tokio_util"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\tokio-util-42983a0f64b73c1c\lib-tokio_util`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1573,8 +1573,8 @@ Stack backtrace:
   21: git_midx_writer_dump
   22: BaseThreadInitThunk
   23: RtlUserThreadStart
-   0.106006100s  INFO prepare_target{force=false package_id=serde v1.0.228 target="serde"}: cargo::core::compiler::fingerprint: fingerprint error for serde v1.0.228/Check { test: false }/TargetInner { ..: lib_target("serde", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.228\\src\\lib.rs", Edition2021) }
-   0.106026600s  INFO prepare_target{force=false package_id=serde v1.0.228 target="serde"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\serde-a8369bf1801d039a\lib-serde`
+   0.370898300s  INFO prepare_target{force=false package_id=serde v1.0.228 target="serde"}: cargo::core::compiler::fingerprint: fingerprint error for serde v1.0.228/Check { test: false }/TargetInner { ..: lib_target("serde", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.228\\src\\lib.rs", Edition2021) }
+   0.370918100s  INFO prepare_target{force=false package_id=serde v1.0.228 target="serde"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\serde-a8369bf1801d039a\lib-serde`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1602,8 +1602,8 @@ Stack backtrace:
   19: git_midx_writer_dump
   20: BaseThreadInitThunk
   21: RtlUserThreadStart
-   0.106704400s  INFO prepare_target{force=false package_id=serde v1.0.228 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for serde v1.0.228/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.228\\build.rs", Edition2021) }
-   0.106718600s  INFO prepare_target{force=false package_id=serde v1.0.228 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\serde-7c1a4b1d7a604a2d\run-build-script-build-script-build`
+   0.371336400s  INFO prepare_target{force=false package_id=serde v1.0.228 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for serde v1.0.228/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.228\\build.rs", Edition2021) }
+   0.371348000s  INFO prepare_target{force=false package_id=serde v1.0.228 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\serde-7c1a4b1d7a604a2d\run-build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1633,8 +1633,8 @@ Stack backtrace:
   21: git_midx_writer_dump
   22: BaseThreadInitThunk
   23: RtlUserThreadStart
-   0.106838600s  INFO prepare_target{force=false package_id=serde v1.0.228 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for serde v1.0.228/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.228\\build.rs", Edition2021) }
-   0.106847100s  INFO prepare_target{force=false package_id=serde v1.0.228 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\serde-b0806e5dbc3f1cc0\build-script-build-script-build`
+   0.371430000s  INFO prepare_target{force=false package_id=serde v1.0.228 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for serde v1.0.228/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.228\\build.rs", Edition2021) }
+   0.371437100s  INFO prepare_target{force=false package_id=serde v1.0.228 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\serde-b0806e5dbc3f1cc0\build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1664,8 +1664,8 @@ Stack backtrace:
   21: git_midx_writer_dump
   22: BaseThreadInitThunk
   23: RtlUserThreadStart
-   0.107276800s  INFO prepare_target{force=false package_id=serde_core v1.0.228 target="serde_core"}: cargo::core::compiler::fingerprint: fingerprint error for serde_core v1.0.228/Check { test: false }/TargetInner { ..: lib_target("serde_core", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_core-1.0.228\\src\\lib.rs", Edition2021) }
-   0.107295800s  INFO prepare_target{force=false package_id=serde_core v1.0.228 target="serde_core"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\serde_core-c51413476724ab93\lib-serde_core`
+   0.371583600s  INFO prepare_target{force=false package_id=serde_core v1.0.228 target="serde_core"}: cargo::core::compiler::fingerprint: fingerprint error for serde_core v1.0.228/Check { test: false }/TargetInner { ..: lib_target("serde_core", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_core-1.0.228\\src\\lib.rs", Edition2021) }
+   0.371594300s  INFO prepare_target{force=false package_id=serde_core v1.0.228 target="serde_core"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\serde_core-c51413476724ab93\lib-serde_core`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1694,8 +1694,8 @@ Stack backtrace:
   20: git_midx_writer_dump
   21: BaseThreadInitThunk
   22: RtlUserThreadStart
-   0.108182700s  INFO prepare_target{force=false package_id=serde_core v1.0.228 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for serde_core v1.0.228/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_core-1.0.228\\build.rs", Edition2021) }
-   0.108211300s  INFO prepare_target{force=false package_id=serde_core v1.0.228 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\serde_core-b8a8d298619cc78f\run-build-script-build-script-build`
+   0.371958100s  INFO prepare_target{force=false package_id=serde_core v1.0.228 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for serde_core v1.0.228/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_core-1.0.228\\build.rs", Edition2021) }
+   0.371969800s  INFO prepare_target{force=false package_id=serde_core v1.0.228 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\serde_core-b8a8d298619cc78f\run-build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1726,8 +1726,8 @@ Stack backtrace:
   22: git_midx_writer_dump
   23: BaseThreadInitThunk
   24: RtlUserThreadStart
-   0.108415300s  INFO prepare_target{force=false package_id=serde_core v1.0.228 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for serde_core v1.0.228/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_core-1.0.228\\build.rs", Edition2021) }
-   0.108428700s  INFO prepare_target{force=false package_id=serde_core v1.0.228 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\serde_core-ed19056696185879\build-script-build-script-build`
+   0.372054300s  INFO prepare_target{force=false package_id=serde_core v1.0.228 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for serde_core v1.0.228/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_core-1.0.228\\build.rs", Edition2021) }
+   0.372061600s  INFO prepare_target{force=false package_id=serde_core v1.0.228 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\serde_core-ed19056696185879\build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1758,8 +1758,8 @@ Stack backtrace:
   22: git_midx_writer_dump
   23: BaseThreadInitThunk
   24: RtlUserThreadStart
-   0.109121200s  INFO prepare_target{force=false package_id=serde_derive v1.0.228 target="serde_derive"}: cargo::core::compiler::fingerprint: fingerprint error for serde_derive v1.0.228/Build/TargetInner { for_host: true, proc_macro: true, ..: lib_target("serde_derive", ["proc-macro"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_derive-1.0.228\\src\\lib.rs", Edition2021) }
-   0.109152200s  INFO prepare_target{force=false package_id=serde_derive v1.0.228 target="serde_derive"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\serde_derive-db53f9fb3ac7682c\lib-serde_derive`
+   0.372226500s  INFO prepare_target{force=false package_id=serde_derive v1.0.228 target="serde_derive"}: cargo::core::compiler::fingerprint: fingerprint error for serde_derive v1.0.228/Build/TargetInner { for_host: true, proc_macro: true, ..: lib_target("serde_derive", ["proc-macro"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_derive-1.0.228\\src\\lib.rs", Edition2021) }
+   0.372237800s  INFO prepare_target{force=false package_id=serde_derive v1.0.228 target="serde_derive"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\serde_derive-db53f9fb3ac7682c\lib-serde_derive`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1787,8 +1787,8 @@ Stack backtrace:
   19: git_midx_writer_dump
   20: BaseThreadInitThunk
   21: RtlUserThreadStart
-   0.110393600s  INFO prepare_target{force=false package_id=serde_json v1.0.145 target="serde_json"}: cargo::core::compiler::fingerprint: fingerprint error for serde_json v1.0.145/Check { test: false }/TargetInner { ..: lib_target("serde_json", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_json-1.0.145\\src\\lib.rs", Edition2021) }
-   0.110416000s  INFO prepare_target{force=false package_id=serde_json v1.0.145 target="serde_json"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\serde_json-466538621e17427d\lib-serde_json`
+   0.372429300s  INFO prepare_target{force=false package_id=serde_json v1.0.145 target="serde_json"}: cargo::core::compiler::fingerprint: fingerprint error for serde_json v1.0.145/Check { test: false }/TargetInner { ..: lib_target("serde_json", ["lib"], "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_json-1.0.145\\src\\lib.rs", Edition2021) }
+   0.372440300s  INFO prepare_target{force=false package_id=serde_json v1.0.145 target="serde_json"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\serde_json-466538621e17427d\lib-serde_json`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1816,8 +1816,8 @@ Stack backtrace:
   19: git_midx_writer_dump
   20: BaseThreadInitThunk
   21: RtlUserThreadStart
-   0.111257300s  INFO prepare_target{force=false package_id=serde_json v1.0.145 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for serde_json v1.0.145/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_json-1.0.145\\build.rs", Edition2021) }
-   0.111276800s  INFO prepare_target{force=false package_id=serde_json v1.0.145 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\serde_json-f0e9c8da27b12366\run-build-script-build-script-build`
+   0.373132000s  INFO prepare_target{force=false package_id=serde_json v1.0.145 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for serde_json v1.0.145/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_json-1.0.145\\build.rs", Edition2021) }
+   0.373144000s  INFO prepare_target{force=false package_id=serde_json v1.0.145 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\serde_json-f0e9c8da27b12366\run-build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1847,8 +1847,8 @@ Stack backtrace:
   21: git_midx_writer_dump
   22: BaseThreadInitThunk
   23: RtlUserThreadStart
-   0.111399000s  INFO prepare_target{force=false package_id=serde_json v1.0.145 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for serde_json v1.0.145/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_json-1.0.145\\build.rs", Edition2021) }
-   0.111409900s  INFO prepare_target{force=false package_id=serde_json v1.0.145 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\serde_json-662aa01c091de8e7\build-script-build-script-build`
+   0.373224800s  INFO prepare_target{force=false package_id=serde_json v1.0.145 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for serde_json v1.0.145/Build/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\afif\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_json-1.0.145\\build.rs", Edition2021) }
+   0.373231900s  INFO prepare_target{force=false package_id=serde_json v1.0.145 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\serde_json-662aa01c091de8e7\build-script-build-script-build`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1878,8 +1878,8 @@ Stack backtrace:
   21: git_midx_writer_dump
   22: BaseThreadInitThunk
   23: RtlUserThreadStart
-   0.111859100s  INFO prepare_target{force=false package_id=rust-api v0.1.0 (C:\Users\afif\Documents\rust-api) target="rust-api"}: cargo::core::compiler::fingerprint: fingerprint error for rust-api v0.1.0 (C:\Users\afif\Documents\rust-api)/Check { test: true }/TargetInner { name: "rust-api", doc: true, ..: with_path("C:\\Users\\afif\\Documents\\rust-api\\src\\main.rs", Edition2024) }
-   0.111876300s  INFO prepare_target{force=false package_id=rust-api v0.1.0 (C:\Users\afif\Documents\rust-api) target="rust-api"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\rust-api-294ccd38b0a05406\test-bin-rust-api`
+   0.373410600s  INFO prepare_target{force=false package_id=rust-api v0.1.0 (C:\Users\afif\Documents\rust-api) target="rust-api"}: cargo::core::compiler::fingerprint: fingerprint error for rust-api v0.1.0 (C:\Users\afif\Documents\rust-api)/Check { test: true }/TargetInner { name: "rust-api", doc: true, ..: with_path("C:\\Users\\afif\\Documents\\rust-api\\src\\main.rs", Edition2024) }
+   0.373421700s  INFO prepare_target{force=false package_id=rust-api v0.1.0 (C:\Users\afif\Documents\rust-api) target="rust-api"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\afif\Documents\rust-api\target\debug\.fingerprint\rust-api-294ccd38b0a05406\test-bin-rust-api`
 
 Caused by:
     The system cannot find the file specified. (os error 2)
@@ -1907,25 +1907,34 @@ Stack backtrace:
   19: BaseThreadInitThunk
   20: RtlUserThreadStart
    Compiling typenum v1.19.0
-   Compiling generic-array v0.14.7
    Compiling zerocopy v0.8.27
-   Compiling windows_x86_64_msvc v0.53.1
    Compiling getrandom v0.3.4
+   Compiling windows_x86_64_msvc v0.53.1
+   Compiling generic-array v0.14.7
    Compiling proc-macro2 v1.0.103
    Compiling quote v1.0.42
    Compiling parking_lot_core v0.9.12
-error: could not compile `generic-array` (build script) due to 1 previous error
+error: could not compile `windows_x86_64_msvc` (build script) due to 1 previous error
 warning: build failed, waiting for other jobs to finish...
    Compiling serde_core v1.0.228
-error: could not compile `windows_x86_64_msvc` (build script) due to 1 previous error
-   Compiling serde v1.0.228
-error: could not compile `quote` (build script) due to 1 previous error
-   Compiling serde_json v1.0.145
-error: could not compile `parking_lot_core` (build script) due to 1 previous error
-error: could not compile `proc-macro2` (build script) due to 1 previous error
 error: could not compile `getrandom` (build script) due to 1 previous error
-error: could not compile `typenum` (build script) due to 1 previous error
-error: could not compile `zerocopy` (build script) due to 1 previous error
-error: could not compile `serde_core` (build script) due to 1 previous error
-error: could not compile `serde` (build script) due to 1 previous error
+   Compiling serde_json v1.0.145
 error: could not compile `serde_json` (build script) due to 1 previous error
+   Compiling serde v1.0.228
+memory allocation of 303120 bytes failed
+rustc-LLVM ERROR: out of memory
+Allocation failed
+error: could not compile `serde` (build script)
+
+Caused by:
+  process didn't exit successfully: `rustc --crate-name build_script_build --edition=2021 C:\Users\afif\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no --cfg "feature=\"default\"" --cfg "feature=\"std\"" --check-cfg cfg(docsrs,test) --check-cfg "cfg(feature, values(\"alloc\", \"default\", \"derive\", \"rc\", \"serde_derive\", \"std\", \"unstable\"))" -C metadata=fb90598fa0727867 -C extra-filename=-b0806e5dbc3f1cc0 --out-dir C:\Users\afif\Documents\rust-api\target\debug\build\serde-b0806e5dbc3f1cc0 -L dependency=C:\Users\afif\Documents\rust-api\target\debug\deps --cap-lints allow` (exit code: 0xc0000409, STATUS_STACK_BUFFER_OVERRUN)
+error: could not compile `zerocopy` (build script)
+
+Caused by:
+  process didn't exit successfully: `rustc --crate-name build_script_build --edition=2021 C:\Users\afif\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\zerocopy-0.8.27\build.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type bin --emit=dep-info,link -C embed-bitcode=no --cfg "feature=\"simd\"" --check-cfg cfg(docsrs,test) --check-cfg "cfg(feature, values(\"__internal_use_only_features_that_work_on_stable\", \"alloc\", \"derive\", \"float-nightly\", \"simd\", \"simd-nightly\", \"std\", \"zerocopy-derive\"))" -C metadata=1da45f93e5d5239c -C extra-filename=-19ca712ccecbf5ff --out-dir C:\Users\afif\Documents\rust-api\target\debug\build\zerocopy-19ca712ccecbf5ff -L dependency=C:\Users\afif\Documents\rust-api\target\debug\deps --cap-lints allow` (exit code: 0xc0000409, STATUS_STACK_BUFFER_OVERRUN)
+error: could not compile `generic-array` (build script) due to 3 previous errors
+error: could not compile `parking_lot_core` (build script) due to 8 previous errors
+error: could not compile `quote` (build script) due to 12 previous errors
+error: could not compile `typenum` (build script) due to 1 previous error
+error: could not compile `proc-macro2` (build script) due to 53 previous errors
+error: could not compile `serde_core` (build script) due to 29 previous errors
