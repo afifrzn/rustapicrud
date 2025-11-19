@@ -420,7 +420,7 @@ fn set_database() -> Result<(), PostgresError> {
             id SERIAL PRIMARY KEY,
             mapel VARCHAR NOT NULL
         );
-        CREATE TABLE IF NOT EXISTS, guru (
+        CREATE TABLE IF NOT EXISTS guru (
             id SERIAL PRIMARY KEY,
             nama VARCHAR NOT NULL,
             no_telefon VARCHAR NOT NULL
